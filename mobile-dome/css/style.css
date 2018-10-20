@@ -1,0 +1,199 @@
+body,html,p,div,span,h1,h2,h3,a,img,input,li,ol,ul,i,nav,section,footer{
+    margin: 0;
+    padding: 0;
+}
+a{text-decoration: none;}
+img{border:none;vertical-align: top;}
+input{outline: none;border: none;}
+ul,li,ol{list-style: none;}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+.nav-wrap{
+    padding: 30px 0;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+.nav-wrap .nav-list li.active a{
+    color: rgb(250, 140, 15);
+    border:solid 1px rgb(250, 140, 15);
+    background-color:transparent;
+}
+.nav-wrap .nav-list li a:hover{
+    background-color: transparent;
+    color: rgb(250, 140, 15);
+}
+.nav-wrap .collapse-btn{
+    cursor: pointer;
+}
+.nav-wrap .navbar-header .nav-brand{
+    display: inline-block;
+    padding-left: 15px;
+    margin-top: 6px;
+}
+
+.banner{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    margin-bottom: 100px;
+}
+.banner .banner-list{
+    width: 100%;
+}
+.banner .banner-list::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.banner .banner-list li{
+    width: 100%;
+    margin-right: -100%;
+    float: left;
+    opacity: 0;
+    z-index: 0;
+    transition: all .8s;
+}
+.banner .banner-list li .imgdisc{
+    position: absolute;
+    left: 30%;
+    top:25%;
+}
+@media screen and (max-width:800px){
+    .banner .banner-list li .imgdisc{
+        display: none;
+    }
+}
+.banner .banner-list li .imgdisc h1{
+    color:rgba(255,255,255,0.8);
+    font-weight: bold;
+    font-style: 38px;
+}
+.banner .banner-list li .imgdisc p{
+    color: #fff;
+    font-size: 16px;
+}
+.banner .banner-list li.active{
+    opacity: 1;
+    z-index: 1;
+}
+.banner .banner-list li a{
+    display: block;
+    width: 100%;
+}
+.banner .banner-list li a img{
+    width: 100%;
+}
+.banner .banner-btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:-30px;
+}
+.banner .banner-btn li{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(127, 127, 127,1);
+    float: left;
+    margin: 5px;
+    cursor: pointer;
+}
+.banner .banner-btn li.active{
+    background-color: #000;
+}
+
+.content .title{
+    margin-bottom: 10px;
+}
+.content .title h1{
+    margin-bottom: 10px;
+}
+.content .content-item{
+    text-align: center;
+    border:solid 1px rgb(212, 212, 212);
+    padding-top: 10px;
+    cursor: pointer;
+    transition: all .6s;
+    overflow: hidden;
+}
+.content .content-item .content-icon{
+    display: block;
+    font-size: 38px;
+    color: rgb(250, 140, 15);
+}
+.content .content-item .content-text a{
+    display: block;
+    margin: 5px 0;
+    color: #000;
+}
+.content .content-item:hover .content-icon{
+    color: #fff;
+}
+.content .content-item:hover{
+    background-color: rgb(250, 140, 15);
+    color: #fff;
+}
+.content .content-item:hover .content-text{
+    -webkit-animation: slide .8s linear;
+    animation: slide .6s linear;
+}
+@keyframes slide{
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content-bottom{
+    padding-top: 60px;
+    background-color: rgb(245, 245, 245);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.content-bottom .container{
+    padding: 0;
+}
+.content-bottom .bottom-text{
+    padding-top: 20px;
+}
+.content-bottom .bottom-text p{
+    line-height: 34px;
+}
+.content-bottom .bottom-text h1{
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.content-bottom .bottom-img img{
+    width: 100%;
+}
+
+.footer{
+    width: 100%;
+    background-color: #000;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.footer .footer-item{
+    color: rgb(148, 148, 148);
+}
+.footer .footer-item h4{
+    color: #fff;
+}
+.footer .footer-item p a{
+    display: block;
+    color: rgb(148, 148, 148);
+}
+.footer .footer-item p a:hover{
+    text-decoration: none;
+    color: #fff;
+}
